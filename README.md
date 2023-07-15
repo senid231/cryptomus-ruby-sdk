@@ -1,7 +1,7 @@
 # Cryptomus
 
 Ruby SDK for Cryptomus Crypto Payment Gateway.  
-See [documentation](https://doc.cryptomus.com)
+See the [documentation](https://doc.cryptomus.com)
 
 ## Installation
 
