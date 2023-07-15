@@ -1,5 +1,8 @@
 # Cryptomus
 
+![Tests](https://github.com/senid231/cryptomus-ruby-sdk/workflows/Tests/badge.svg)
+[![Gem Version](https://badge.fury.io/rb/cryptomus.svg)](https://badge.fury.io/rb/cryptomus)
+
 Ruby SDK for Cryptomus Crypto Payment Gateway.  
 See the [documentation](https://doc.cryptomus.com)
 
