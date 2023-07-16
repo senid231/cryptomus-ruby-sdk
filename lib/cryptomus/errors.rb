@@ -11,13 +11,14 @@ module Cryptomus
       # @!method response_body [Hash,nil]
       attr_reader :response, :status, :response_body
 
-      # @param msg [String]
       # @param response [Faraday::Response,nil]
-      def initialize(msg, response = nil)
+      # @param msg [String,nil]
+      def initialize(response, msg = nil)
         @response = response
         @status = response&.status
         @response_body = response&.body
-        super(msg)
+        msg ||= "Response #{status}, #{response_body}" if response
+        super(msg || self.class.name)
       end
     end
   end

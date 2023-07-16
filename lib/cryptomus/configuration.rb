@@ -6,6 +6,7 @@ module Cryptomus
                   :merchant_id,
                   :user_agent,
                   :connection_config,
+                  :handle_response,
                   :on_error,
                   :logger
 

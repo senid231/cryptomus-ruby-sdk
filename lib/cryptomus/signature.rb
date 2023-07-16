@@ -11,7 +11,7 @@ module Cryptomus
     # @param raw_body [String]
     # @return [String]
     def generate(raw_body)
-      raw_body_encoded = Base64.encode64(raw_body || '')
+      raw_body_encoded = Base64.strict_encode64(raw_body || '')
       Digest::MD5.hexdigest("#{raw_body_encoded}#{Cryptomus.config.api_key}")
     end
   end
