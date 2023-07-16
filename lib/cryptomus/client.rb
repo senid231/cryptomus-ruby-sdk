@@ -42,7 +42,14 @@ module Cryptomus
     # @raise [Cryptomus::Errors::ApiError]
     def payment(uuid: nil, order_id: nil)
       attributes = { uuid:, order_id: }.compact
-      connection.get('/v1/payment/info', body: attributes)
+      connection.post('/v1/payment/info', body: attributes)
+    end
+
+    # https://doc.cryptomus.com/payments/list-of-services
+    # @return [Hash]
+    # @raise [Cryptomus::Errors::ApiError]
+    def list_services
+      connection.post('/v1/payment/services', body: {})
     end
 
     # https://doc.cryptomus.com/payments/creating-static
