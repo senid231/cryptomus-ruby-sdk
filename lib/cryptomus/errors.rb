@@ -17,7 +17,8 @@ module Cryptomus
         @response = response
         @status = response&.status
         @response_body = response&.body
-        msg ||= "Response #{status}, #{response_body}" if response
+        body_msg = response_body.is_a?(Hash) ? JSON.generate(response_body) : response_body
+        msg ||= "Response #{status}, #{body_msg}" if response
         super(msg || self.class.name)
       end
     end
