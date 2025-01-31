@@ -24,6 +24,7 @@ require 'cryptomus'
 Cryptomus.configure do |config|
   config.merchant_id = 'your_merchant_id'
   config.api_key = 'your_api_key'
+  # config.base_url = '...' # optional, default is https://api.cryptomus.com
 end
 
 crypto_payment = Cryptomus::Client.create_payment(
