@@ -41,7 +41,7 @@ module Cryptomus
 
     def connection_options
       {
-        url: Cryptomus::CONST::URL,
+        url: Cryptomus.config.base_url,
         headers: {
           'Content-Type' => MIME_TYPE,
           merchant: Cryptomus.config.merchant_id,
